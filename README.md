@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# Senior Frontend Engineer Portfolio — Yurii Volik
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, minimalist portfolio website built with **React 19**, **Vite**, and **Tailwind CSS v4**. This project is architected to showcase a Senior-level career path, specifically optimized for the DACH (Germany, Austria, Switzerland) tech market.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework:** React 19 (Strict Mode)
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS v4 (using `@tailwindcss/postcss`)
+- **Icons:** Lucide React
+- **Language:** TypeScript
+- **Deployment:** Vercel
 
-## React Compiler
+## ✨ Key Engineering Highlights
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Timeline Architecture:** A custom-built, scalable experience timeline that handles complex project nesting (e.g., Hearst Magazines & Yomobile under a single agency period).
+- **Environment-Driven Security:** All personal contact details are managed strictly via environment variables (`.env`), ensuring no sensitive data is leaked to public repositories.
+- **Atomic UI Components:** Modular architecture using a custom UI Kit (e.g., `SectionHeading` with integrated Lucide icons).
+- **Performance Optimized:** Leverages Tailwind v4's modern CSS engine and optimized assets for near-perfect Lighthouse scores.
+- **Accessibility:** Built with WCAG principles in mind, focusing on semantic HTML and ARIA standards.
 
-## Expanding the ESLint configuration
+## 🛠️ Installation & Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone the repository:**
+   ```bash
+   git clone [your-repo-url]
+   cd portfolio
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. **Configure Environment Variables:**
+   Create a `.env` file in the root directory. Use `.env.example` as a template:
+   ```env
+   VITE_NAME="Yurii Volik"
+   VITE_ROLE="Senior Frontend Engineer"
+   VITE_LOCATION="Switzerland"
+   VITE_EMAIL="volik.ua@gmail.com"
+   VITE_PHONE="+41..."
+   VITE_LINKEDIN="https://linkedin.com/in/yuriivolik"
+   VITE_GITHUB="https://github.com/yuriivolik"
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+4. **Run Development Server:**
+   ```bash
+   npm run dev
+   ```
+
+## 📂 Project Structure
+
+```text
+src/
+├── assets/             # Global assets (Profile photo, etc.)
+├── components/         # React components
+│   └── ui/             # Reusable UI-kit (SectionHeading.tsx)
+├── data.ts             # Centralized resume data (Experience, Skills, Education)
+├── App.tsx             # Main layout orchestration
+├── main.tsx            # Entry point
+└── index.css           # Tailwind v4 entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌍 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The project is pre-configured for **Vercel**. 
+**Important:** When deploying, manually add all `VITE_*` environment variables in the Vercel Dashboard under **Project Settings > Environment Variables**.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+*Built with React, Tailwind v4 and precision.*
