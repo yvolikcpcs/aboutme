@@ -7,7 +7,7 @@ export const experiences = [
     projects: [
       {
         name: "Enterprise Brand Architecture",
-        stack: "React, Next.js, TypeScript, Redux, Piano, Optimizely, GA4",
+        stack: "React, Next.js, GraphQL, Styled Components, TypeScript, Piano, Optimizely, GA4, Marfeel",
         links: [
           "https://www.cosmopolitan.com",
           "https://www.elle.com",
@@ -15,10 +15,11 @@ export const experiences = [
           "https://www.esquire.com"
         ],
         points: [
-          "Architected and maintained scalable frontend solutions for premier global brands supporting 10M+ monthly active users.",
-          "Led complex integrations of Piano (Subscription & Paywalls), Optimizely (Full-stack A/B testing), and GA4 analytics.",
-          "Implemented robust User Consent frameworks (CMP) to ensure strict GDPR and CCPA compliance across the global portfolio.",
-          "Optimized Core Web Vitals and SEO, achieving significant improvements in page load speeds and organic visibility."
+          "Architected and evolved scalable frontend solutions for premier global brands, supporting 10M+ monthly active users.",
+          "Acted as a technical mentor for junior and middle frontend engineers, conducting code reviews and establishing engineering best practices.",
+          "Led complex integrations of GA4 and Marfeel for deep behavioral analytics, alongside Piano (Paywalls) and Optimizely for full-stack A/B testing.",
+          "Optimized data fetching using GraphQL to ensure efficient content delivery across a vast global infrastructure.",
+          "Engineered robust User Consent (CMP) frameworks to ensure 100% GDPR and CCPA compliance across the global portfolio."
         ]
       }
     ]
@@ -31,11 +32,12 @@ export const experiences = [
     projects: [
       {
         name: "E-commerce & Connectivity",
-        stack: "Next.js, React, TypeScript, Tailwind CSS",
+        stack: "Next.js (Server Actions), React, TypeScript, Tailwind CSS, SSO Auth",
         links: ["https://www.yomobile.com/"],
         points: [
-          "Developed a high-performance, mobile-first e-commerce platform for global eSIM connectivity.",
-          "Delivered a seamless checkout experience with a focus on web performance and SEO, driving higher conversion rates."
+          "Developed a high-performance, mobile-first e-commerce platform using Next.js Server Actions and Tailwind CSS.",
+          "Integrated secure SSO Authentication flows and implemented User Consent modules to enhance data protection and user privacy.",
+          "Optimized checkout UX and integrated GA tracking, driving significant growth in conversion rates and SEO performance."
         ]
       }
     ]
@@ -48,12 +50,12 @@ export const experiences = [
     projects: [
       {
         name: "Funke Mediengruppe - Digital Products",
-        stack: "Angular, Vue.js, JavaScript",
+        stack: "React, JavaScript, Agile/Scrum",
         links: [],
         points: [
-          "Built responsive web applications for European media giant Funke Mediengruppe, adhering to rigorous German quality and performance standards.",
-          "Collaborated closely within a German-speaking team using Agile (Scrum) methodologies, ensuring rapid delivery and maintainability.",
-          "Conducted technical code reviews and mentored junior developers on frontend best practices."
+          "Developed responsive web applications for German media leader Funke Mediengruppe, adhering to rigorous DACH code quality and accessibility standards.",
+          "Collaborated within an international English-speaking Scrum team to ensure rapid delivery of high-traffic news platforms.",
+          "Ensured high maintainability through technical code reviews and alignment with rigorous German engineering requirements."
         ]
       }
     ]
@@ -69,8 +71,8 @@ export const experiences = [
         stack: "PHP, WordPress, HTML5, CSS3",
         links: [],
         points: [
-          "Developed custom themes and complex plugins for various international retail projects, building a deep understanding of Server-Side Rendering (SSR) logic.",
-          "This solid backend background now facilitates advanced architectural work with modern frameworks like Next.js."
+          "Delivered custom themes and complex plugins for international retail projects, building a deep understanding of full-lifecycle web development.",
+          "Leveraged strong PHP/SSR foundations to facilitate a seamless transition into modern architectural work with Next.js."
         ]
       }
     ]

@@ -14,9 +14,9 @@ const Header = () => {
   return (
     <header className="py-3 border-b border-slate-100 sticky top-0 bg-white/80 backdrop-blur-md z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="font-black text-xl tracking-tighter uppercase">
+        <a href="/" className="font-black text-xl tracking-tighter uppercase">
           Portfolio
-        </div>
+        </a>
 
         <nav className="hidden md:flex gap-6 text-xs font-bold uppercase tracking-widest text-slate-500">
           {navLinks.map((link) => (

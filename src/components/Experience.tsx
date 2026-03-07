@@ -15,7 +15,7 @@ const Experience = () => {
               <h3 className="text-3xl font-black text-slate-900 uppercase italic tracking-tighter">
                 {exp.company}
               </h3>
-              <span className="text-slate-400 font-mono text-sm uppercase">
+              <span className="text-slate-400 font-mono text-md uppercase">
                 {exp.period}
               </span>
             </div>
@@ -54,7 +54,7 @@ const Experience = () => {
                   </div>
                 )}
                 
-                <ul className="space-y-3 text-slate-600 leading-relaxed max-w-3xl mb-4 text-sm">
+                <ul className="space-y-3 text-slate-600 leading-relaxed max-w-3xl mb-4 text-md">
                   {project.points.map((point, k) => (
                     <li key={k} className="flex gap-3">
                       <span className="text-blue-600 font-bold">/</span>
