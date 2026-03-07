@@ -46,7 +46,7 @@ const Experience = () => {
                         href={url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-[10px] font-bold text-blue-600 border border-blue-100 bg-blue-50 px-2 py-1 rounded hover:bg-blue-600 hover:text-white transition-all"
+                        className="text-xs font-bold text-blue-600 border border-blue-100 bg-blue-50 px-2 py-1 rounded hover:bg-blue-600 hover:text-white transition-all"
                       >
                         {url.replace('https://', '').replace('www.', '').replace(/\/$/, '')}
                       </a>
@@ -64,8 +64,8 @@ const Experience = () => {
                 </ul>
 
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-black text-slate-300 uppercase">Stack:</span>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase">{project.stack}</span>
+                  <span className="text-xs font-black text-slate-300 uppercase">Stack:</span>
+                  <span className="text-xs font-bold text-slate-500 uppercase">{project.stack}</span>
                 </div>
               </div>
             ))}

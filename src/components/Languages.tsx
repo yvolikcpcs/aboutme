@@ -6,7 +6,6 @@ const Languages = () => (
   <section id="languages" className="py-16 border-t border-slate-100">
     <SectionHeading icon={LanguagesIcon}>Languages</SectionHeading>
 
-    {/* Changed items-end to items-start */}
     <div className="flex flex-col items-start space-y-4">
       {languages.map((lang, i) => (
         <div key={i} className="flex flex-col md:flex-row md:gap-2">

@@ -1,13 +1,13 @@
 export const experiences = [
   {
-    company: "Custom PC Software (Remote)",
-    role: "Senior Frontend Developer",
-    period: "01.2011 — Present",
-    description: "Software development agency working on dedicated projects for international clients.",
+    company: "Hearst Magazines (via Custom PC Software)",
+    role: "Senior Frontend Engineer",
+    period: "01.2020 — Present",
+    description: "Global Media Platform (Cosmopolitan, Elle, Esquire, Quest).",
     projects: [
       {
-        name: "Hearst Magazines (USA) - Global Media Platform",
-        stack: "React, Next.js, TypeScript, Redux",
+        name: "Enterprise Brand Architecture",
+        stack: "React, Next.js, TypeScript, Redux, Piano, Optimizely, GA4",
         links: [
           "https://www.cosmopolitan.com",
           "https://www.elle.com",
@@ -15,18 +15,27 @@ export const experiences = [
           "https://www.esquire.com"
         ],
         points: [
-          "Architected and maintained scalable frontend solutions for enterprise brands supporting millions of monthly users.",
-          "Integrated AI-powered personalization, SSO authentication, and complex analytics systems.",
-          "Optimized Core Web Vitals and SEO, significantly improving page load speeds across the global portfolio."
+          "Architected and maintained scalable frontend solutions for premier global brands supporting 10M+ monthly active users.",
+          "Led complex integrations of Piano (Subscription & Paywalls), Optimizely (Full-stack A/B testing), and GA4 analytics.",
+          "Implemented robust User Consent frameworks (CMP) to ensure strict GDPR and CCPA compliance across the global portfolio.",
+          "Optimized Core Web Vitals and SEO, achieving significant improvements in page load speeds and organic visibility."
         ]
-      },
+      }
+    ]
+  },
+  {
+    company: "Yomobile (via Custom PC Software)",
+    role: "Frontend Developer",
+    period: "2019 — 2020",
+    description: "Global eSIM Connectivity Platform.",
+    projects: [
       {
-        name: "Yomobile - Global eSIM Connectivity Platform",
+        name: "E-commerce & Connectivity",
         stack: "Next.js, React, TypeScript, Tailwind CSS",
         links: ["https://www.yomobile.com/"],
         points: [
-          "Developed a high-performance e-commerce platform for global eSIM connectivity.",
-          "Delivered a seamless, mobile-first UX with optimized SEO for high conversion rates."
+          "Developed a high-performance, mobile-first e-commerce platform for global eSIM connectivity.",
+          "Delivered a seamless checkout experience with a focus on web performance and SEO, driving higher conversion rates."
         ]
       }
     ]
@@ -42,26 +51,26 @@ export const experiences = [
         stack: "Angular, Vue.js, JavaScript",
         links: [],
         points: [
-          "Built responsive web applications for a European media giant, ensuring strict adherence to German quality standards.",
-          "Collaborated closely with a German-speaking team, adapting to DACH agile methodologies.",
-          "Conducted code reviews to ensure maintainability and best practices."
+          "Built responsive web applications for European media giant Funke Mediengruppe, adhering to rigorous German quality and performance standards.",
+          "Collaborated closely within a German-speaking team using Agile (Scrum) methodologies, ensuring rapid delivery and maintainability.",
+          "Conducted technical code reviews and mentored junior developers on frontend best practices."
         ]
       }
     ]
   },
   {
-    company: "Custom E-commerce & Retail Solutions",
+    company: "Custom E-commerce (via Custom PC Software)",
     role: "Full-Stack & CMS Developer (Early Career)",
     period: "01.2011 — 2017",
-    description: "Building a strong foundation in web architecture.",
+    description: "Building a strong foundation in web architecture and SSR logic.",
     projects: [
       {
-        name: "E-commerce & Retail Projects",
+        name: "International Retail Projects",
         stack: "PHP, WordPress, HTML5, CSS3",
         links: [],
         points: [
-          "Developed custom themes and plugins, building a strong foundation in Server-Side Rendering (SSR) logic.",
-          "This backend background now facilitates advanced architectural work with Next.js."
+          "Developed custom themes and complex plugins for various international retail projects, building a deep understanding of Server-Side Rendering (SSR) logic.",
+          "This solid backend background now facilitates advanced architectural work with modern frameworks like Next.js."
         ]
       }
     ]
@@ -79,27 +88,27 @@ export const education = [
 export const technicalSkills = [
   {
     category: "Core",
-    items: ["React.js", "Next.js", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"]
+    items: ["React.js", "Next.js (App Router)", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"]
   },
   {
-    category: "A11y & UI",
-    items: ["WCAG 2.1/2.2", "ARIA", "Tailwind CSS", "Material UI", "Styled Components", "Figma"]
+    category: "Enterprise & Analytics",
+    items: ["piano.io", "Optimizely (A/B Testing)", "GA4", "GTM", "AI Personalization"]
   },
   {
-    category: "State & Logic",
-    items: ["Redux Toolkit", "Context API", "React Query"]
+    category: "Compliance & A11y",
+    items: ["GDPR/DSGVO", "WCAG 2.1/2.2", "ARIA", "User Consent (CMP)"]
   },
   {
-    category: "Tools & Testing",
-    items: ["Docker", "Linux CLI", "Git", "Jest", "Cypress", "CI/CD", "Lighthouse"]
+    category: "State & Architecture",
+    items: ["Redux Toolkit", "React Query", "Context API", "GraphQL", "REST API"]
   },
   {
-    category: "Backend & Data",
-    items: ["SQL", "REST API", "GraphQL", "SSO", "AI Personalization"]
+    category: "Tools & Quality",
+    items: ["Core Web Vitals", "Jest", "Cypress", "Docker", "CI/CD", "Lighthouse"]
   },
   {
-    category: "Cloud Basics",
-    items: ["Azure Fundamentals (AZ-900)"]
+    category: "Design & Backend",
+    items: ["Tailwind CSS", "Material UI", "Figma", "SQL", "SSO", "Azure (AZ-900)"]
   }
 ];
 

@@ -1,11 +1,12 @@
-/* Import your photo from assets folder */
 import myPhoto from '@/assets/cv1024x1024.png';
 
 
 const ContactInfo = () => {
-  /* Using flex-col-reverse on mobile so the photo (second div) 
-     appears first. On desktop (md:flex-row) info stays left, photo stays right.
-  */
+  const socialLinks = [
+    { label: 'LinkedIn', href: import.meta.env.VITE_LINKEDIN },
+    { label: 'GitHub', href: import.meta.env.VITE_GITHUB },
+  ].filter(link => link.href);
+
   return (
     <section className="py-12 flex flex-col-reverse md:flex-row justify-between items-start gap-8">
       
@@ -45,23 +46,18 @@ const ContactInfo = () => {
             </a>
           </div>
 
-          <div className="flex gap-6 mt-4">
-            <a 
-              href={import.meta.env.VITE_LINKEDIN} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-slate-900 font-black uppercase text-xs tracking-widest border-b-2 border-blue-600 hover:text-blue-600 transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a 
-              href={import.meta.env.VITE_GITHUB} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-slate-900 font-black uppercase text-xs tracking-widest border-b-2 border-blue-600 hover:text-blue-600 transition-colors"
-            >
-              GitHub
-            </a>
+          <div className="flex flex-wrap gap-6 mt-4">
+            {socialLinks.map((link) => (
+              <a 
+                key={link.label}
+                href={link.href} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-900 font-black uppercase text-xs tracking-widest border-b-2 border-blue-600 hover:text-blue-600 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
