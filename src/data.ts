@@ -106,7 +106,7 @@ export const technicalSkills = [
   },
   {
     category: "Tools & Quality",
-    items: ["Core Web Vitals", "Jest", "Cypress", "Docker", "CI/CD", "Lighthouse"]
+    items: ["Vite", "Core Web Vitals", "Jest", "Cypress", "Docker", "CI/CD", "Lighthouse"]
   },
   {
     category: "Design & Backend",
