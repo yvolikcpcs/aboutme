@@ -1,0 +1,53 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    # Подтягиваем ID проекта для Vercel из Secrets
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install & Lint
+        run: |
+          npm ci
+          npm run lint
+
+      - name: Build SSG
+        run: npm run build
+        env:
+          VITE_NAME: ${{ vars.VITE_NAME }}
+          VITE_ROLE: ${{ vars.VITE_ROLE }}
+          VITE_LOCATION: ${{ vars.VITE_LOCATION }}
+          VITE_EMAIL: ${{ vars.VITE_EMAIL }}
+          VITE_LINKEDIN: ${{ vars.VITE_LINKEDIN }}
+          VITE_GITHUB: ${{ vars.VITE_GITHUB }}
+          
+          VITE_PHONE: ${{ secrets.VITE_PHONE }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ env.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ env.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: ./

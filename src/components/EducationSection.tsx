@@ -1,11 +1,11 @@
 import { GraduationCap } from 'lucide-react';
-import { education } from "@/data";
 import SectionHeading from '@/components/ui/SectionHeading';
+import type { Education } from '@/types/database';
 
-const Education = () => (
+const EducationSection = ({ data }: { data: Education[] }) => (
   <section id="education" className="py-12 border-t border-slate-100">
     <SectionHeading icon={GraduationCap}>Education</SectionHeading>
-    {education.map((edu, i) => (
+    {data.map((edu, i) => (
       <div key={i}>
         <h3 className="text-lg font-bold">{edu.institution}</h3>
         <p className="text-slate-600">{edu.degree}</p>
@@ -15,4 +15,4 @@ const Education = () => (
   </section>
 );
 
-export default Education;
+export default EducationSection;

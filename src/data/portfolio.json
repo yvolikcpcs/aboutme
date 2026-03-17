@@ -1,0 +1,197 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "company": "Hearst Magazines (via Custom PC Software)",
+      "role": "Senior Frontend Engineer",
+      "period": "01.2020 — Present",
+      "description": "Global Media Platform (Cosmopolitan, Elle, Esquire, Quest).",
+      "sort_order": 10,
+      "projects": [
+        {
+          "id": 1,
+          "name": "Enterprise Brand Architecture",
+          "links": [
+            "https://www.cosmopolitan.com",
+            "https://www.elle.com",
+            "https://www.quest.nl",
+            "https://www.esquire.com"
+          ],
+          "stack": "React, Next.js, GraphQL, Styled Components, TypeScript, Piano, Optimizely, GA4, Marfeel",
+          "points": [
+            "Architected and evolved scalable frontend solutions for premier global brands, supporting 10M+ monthly active users.",
+            "Acted as a technical mentor for junior and middle frontend engineers, conducting code reviews and establishing engineering best practices.",
+            "Led complex integrations of GA4 and Marfeel for deep behavioral analytics, alongside Piano (Paywalls) and Optimizely for full-stack A/B testing.",
+            "Optimized data fetching using GraphQL to ensure efficient content delivery across a vast global infrastructure.",
+            "Engineered robust User Consent (CMP) frameworks to ensure 100% GDPR and CCPA compliance across the global portfolio."
+          ],
+          "experience_id": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Yomobile (via Custom PC Software)",
+      "role": "Frontend Developer",
+      "period": "2024 — 2025",
+      "description": "Global eSIM Connectivity Platform.",
+      "sort_order": 20,
+      "projects": [
+        {
+          "id": 2,
+          "name": "E-commerce & Connectivity",
+          "links": [
+            "https://www.yomobile.com/"
+          ],
+          "stack": "Next.js (Server Actions), React, TypeScript, Tailwind CSS, SSO Auth",
+          "points": [
+            "Developed a high-performance, mobile-first e-commerce platform using Next.js Server Actions and Tailwind CSS.",
+            "Integrated secure SSO Authentication flows and implemented User Consent modules to enhance data protection and user privacy.",
+            "Optimized checkout UX and integrated GA tracking, driving significant growth in conversion rates and SEO performance."
+          ],
+          "experience_id": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "company": "Stanwood (Berlin, Germany)",
+      "role": "Frontend Developer",
+      "period": "2018 — 2019",
+      "description": "Digital Product Studio working for Funke Mediengruppe.",
+      "sort_order": 30,
+      "projects": [
+        {
+          "id": 3,
+          "name": "Funke Mediengruppe - Digital Products",
+          "links": [],
+          "stack": "React, JavaScript, Agile/Scrum",
+          "points": [
+            "Developed responsive web applications for German media leader Funke Mediengruppe, adhering to rigorous DACH code quality and accessibility standards.",
+            "Collaborated within an international English-speaking Scrum team to ensure rapid delivery of high-traffic news platforms.",
+            "Ensured high maintainability through technical code reviews and alignment with rigorous German engineering requirements."
+          ],
+          "experience_id": 3
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "company": "Custom E-commerce (via Custom PC Software)",
+      "role": "Full-Stack & CMS Developer (Early Career)",
+      "period": "01.2011 — 2017",
+      "description": "Building a strong foundation in web architecture and SSR logic.",
+      "sort_order": 40,
+      "projects": [
+        {
+          "id": 4,
+          "name": "International Retail Projects",
+          "links": [],
+          "stack": "PHP, WordPress, HTML5, CSS3",
+          "points": [
+            "Delivered custom themes and complex plugins for international retail projects, building a deep understanding of full-lifecycle web development.",
+            "Leveraged strong PHP/SSR foundations to facilitate a seamless transition into modern architectural work with Next.js."
+          ],
+          "experience_id": 4
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "Sumy State University, Ukraine",
+      "degree": "Master's Degree in Computer Science",
+      "period": "2006 — 2011"
+    }
+  ],
+  "technicalSkills": [
+    {
+      "id": 1,
+      "category": "Core",
+      "items": [
+        "React.js",
+        "Next.js (App Router)",
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Enterprise & Analytics",
+      "items": [
+        "piano.io",
+        "Optimizely (A/B Testing)",
+        "GA4",
+        "GTM",
+        "AI Personalization"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Compliance & A11y",
+      "items": [
+        "GDPR/DSGVO",
+        "WCAG 2.1/2.2",
+        "ARIA",
+        "User Consent (CMP)"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "State & Architecture",
+      "items": [
+        "Redux Toolkit",
+        "React Query",
+        "Context API",
+        "GraphQL",
+        "REST API"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Tools & Quality",
+      "items": [
+        "Vite",
+        "Core Web Vitals",
+        "Jest",
+        "Cypress",
+        "Docker",
+        "CI/CD",
+        "Lighthouse"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Design & Backend",
+      "items": [
+        "Tailwind CSS",
+        "Material UI",
+        "Figma",
+        "SQL",
+        "SSO",
+        "Azure (AZ-900)"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "id": 1,
+      "name": "English",
+      "level": "Upper-Intermediate (B2) - Daily working language"
+    },
+    {
+      "id": 2,
+      "name": "German",
+      "level": "Pre-Intermediate (A2) - Currently attending intensive courses"
+    },
+    {
+      "id": 3,
+      "name": "Ukrainian / Russian",
+      "level": "Native"
+    }
+  ],
+  "updatedAt": "2026-03-17T16:04:49.003Z"
+}

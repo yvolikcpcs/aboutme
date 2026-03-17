@@ -1,13 +1,13 @@
 import { Briefcase } from 'lucide-react';
-import { experiences } from '@/data';
 import SectionHeading from '@/components/ui/SectionHeading';
+import type { Experience } from '@/types/database';
 
-const Experience = () => {
+const ExperienceSection = ({ data }: { data: Experience[] }) => {
   return (
     <section id="experience" className="py-16 space-y-16">
       <SectionHeading icon={Briefcase}>Professional Experience</SectionHeading>
       
-      {experiences.map((exp, i) => (
+      {data.map((exp, i) => (
         <div key={i} className="space-y-8">
           {/* Header */}
           <div className="border-b-2 border-slate-900 pb-4">
@@ -26,7 +26,7 @@ const Experience = () => {
 
           {/* Projects Container with Border */}
           <div className="space-y-12 pl-4 md:pl-8 border-l border-slate-100 ml-1 md:ml-0">
-            {exp.projects.map((project, j) => (
+            {exp.projects && exp.projects.map((project, j) => (
               <div key={j} className="relative">
                 {/* The Dot: 
                   -left-5 (20px) centers the 8px dot on the pl-4 (16px) border.
@@ -76,4 +76,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default ExperienceSection;
