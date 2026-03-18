@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import CopyableContact from './ui/CopyableContact';
 
 const ContactInfo = () => {
