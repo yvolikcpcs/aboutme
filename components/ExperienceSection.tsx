@@ -8,7 +8,7 @@ const ExperienceSection = ({ data }: { data: Experience[] }) => {
       <SectionHeading icon={Briefcase}>Professional Experience</SectionHeading>
       
       {data.map((exp, i) => (
-        <div key={i} className="space-y-8">
+        <article key={i} className="space-y-8">
           {/* Header */}
           <div className="border-b-2 border-slate-900 pb-4">
             <div className="flex flex-col md:flex-row md:justify-between items-baseline">
@@ -70,7 +70,7 @@ const ExperienceSection = ({ data }: { data: Experience[] }) => {
               </div>
             ))}
           </div>
-        </div>
+        </article>
       ))}
     </section>
   );

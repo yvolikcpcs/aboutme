@@ -35,13 +35,17 @@ A high-performance, minimalist portfolio website built with **React 19**, **Vite
 3. **Configure Environment Variables:**
    Create a `.env` file in the root directory. Use `.env.example` as a template:
    ```env
-   VITE_NAME="Yurii Volik"
-   VITE_ROLE="Senior Frontend Engineer"
-   VITE_LOCATION="Switzerland"
-   VITE_EMAIL="volik.ua@gmail.com"
-   VITE_PHONE="+41..."
-   VITE_LINKEDIN="https://linkedin.com/in/yuriivolik"
-   VITE_GITHUB="https://github.com/yuriivolik"
+   NEXT_PUBLIC_NAME="Yurii Volik"
+   NEXT_PUBLIC_ROLE="Senior Frontend Engineer"
+   NEXT_PUBLIC_LOCATION="Switzerland, Zurich Metropolitan Area"
+   NEXT_PUBLIC_EMAIL="volik.ua@gmail.com"
+   NEXT_PUBLIC_PHONE="+1 234 56 789 89"
+   NEXT_PUBLIC_LINKEDIN="https://linkedin.com/in/yurii-volik-100ba0171/"
+   NEXT_PUBLIC_GITHUB="https://github.com/yvolikcpcs"
+
+   # Server-side (Supabase)
+   SUPABASE_URL="..."
+   SUPABASE_ANON_KEY="..."
    ```
 
 4. **Run Development Server:**

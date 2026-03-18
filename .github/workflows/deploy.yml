@@ -1,53 +1,52 @@
-name: Deploy Portfolio
+name: Vercel Production Deployment
 
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual triggers
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 jobs:
-  build-and-deploy:
+  Deploy-Production:
     runs-on: ubuntu-latest
-    
-    # Подтягиваем ID проекта для Vercel из Secrets
-    env:
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
-      - name: Install & Lint
-        run: |
-          npm ci
-          npm run lint
+      - name: Install Dependencies
+        run: npm ci
 
-      - name: Build SSG
-        run: npm run build
+      - name: Run Lint
+        run: npm run lint
+
+      # Ensure this script exists in package.json (see step 2)
+      - name: Type Check
+        run: npm run type-check
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
         env:
-          VITE_NAME: ${{ vars.VITE_NAME }}
-          VITE_ROLE: ${{ vars.VITE_ROLE }}
-          VITE_LOCATION: ${{ vars.VITE_LOCATION }}
-          VITE_EMAIL: ${{ vars.VITE_EMAIL }}
-          VITE_LINKEDIN: ${{ vars.VITE_LINKEDIN }}
-          VITE_GITHUB: ${{ vars.VITE_GITHUB }}
-          
-          VITE_PHONE: ${{ secrets.VITE_PHONE }}
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          # These are needed during build time for Next.js SSG
+          NEXT_PUBLIC_NAME: ${{ vars.NEXT_PUBLIC_NAME }}
+          NEXT_PUBLIC_ROLE: ${{ vars.NEXT_PUBLIC_ROLE }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ env.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ env.VERCEL_PROJECT_ID }}
-          vercel-args: '--prod'
-          working-directory: ./
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}

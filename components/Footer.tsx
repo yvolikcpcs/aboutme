@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import Modal from '@/components/ui/Modal';
 
@@ -22,9 +24,9 @@ const Footer = () => {
       >
         {modalType === 'impressum' ? (
           <div className="space-y-4">
-            <p><strong>Provider:</strong> {import.meta.env.VITE_NAME}</p>
-            <p><strong>Address:</strong> {import.meta.env.VITE_LOCATION}</p>
-            <p><strong>Contact:</strong> <a href={`mailto:${import.meta.env.VITE_EMAIL}`}>{import.meta.env.VITE_EMAIL}</a> | <a href={`tel:${import.meta.env.VITE_PHONE}`}>{import.meta.env.VITE_PHONE}</a></p>
+            <p><strong>Provider:</strong> {process.env.NEXT_PUBLIC_NAME}</p>
+            <p><strong>Address:</strong> {process.env.NEXT_PUBLIC_LOCATION}</p>
+            <p><strong>Contact:</strong> <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>{process.env.NEXT_PUBLIC_EMAIL}</a> | <a href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}>{process.env.NEXT_PUBLIC_PHONE}</a></p>
             <p className="text-xs text-slate-400">Responsible for content according to § 5 TMG / § 55 RStV.</p>
           </div>
         ) : (

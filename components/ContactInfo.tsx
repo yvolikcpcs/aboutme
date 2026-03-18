@@ -1,48 +1,45 @@
-import myPhoto from '@/assets/cv1024x1024.png';
-
+import Image from 'next/image';
 
 const ContactInfo = () => {
+  // Logic remains on the server
   const socialLinks = [
-    { label: 'LinkedIn', href: import.meta.env.VITE_LINKEDIN },
-    { label: 'GitHub', href: import.meta.env.VITE_GITHUB },
+    { label: 'LinkedIn', href: process.env.NEXT_PUBLIC_LINKEDIN },
+    { label: 'GitHub', href: process.env.NEXT_PUBLIC_GITHUB },
   ].filter(link => link.href);
 
   return (
     <section className="py-12 flex flex-col-reverse md:flex-row justify-between items-start gap-8">
-      
-      {/* Left side: Contact Details */}
       <div className="flex-1">
         <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
-          {import.meta.env.VITE_NAME}
+          {process.env.NEXT_PUBLIC_NAME}
         </h1>
         <p className="text-2xl text-blue-600 font-medium mb-8">
-          {import.meta.env.VITE_ROLE}
+          {process.env.NEXT_PUBLIC_ROLE}
         </p>
         
-        {/* Row by row contact details */}
         <div className="flex flex-col gap-4 text-slate-500 font-medium">
           <div className="flex items-center gap-3">
-            <span className="w-6 text-center">📍</span>
-            <span>{import.meta.env.VITE_LOCATION}</span>
+            <span className="w-6 text-center" aria-hidden="true">📍</span>
+            <span>{process.env.NEXT_PUBLIC_LOCATION}</span>
           </div>
           
           <div className="flex items-center gap-3">
-            <span className="w-6 text-center">✉️</span>
+            <span className="w-6 text-center" aria-hidden="true">✉️</span>
             <a 
-              href={`mailto:${import.meta.env.VITE_EMAIL}`} 
+              href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} 
               className="hover:text-blue-600 transition-colors underline decoration-slate-200 underline-offset-4"
             >
-              {import.meta.env.VITE_EMAIL}
+              {process.env.NEXT_PUBLIC_EMAIL}
             </a>
           </div>
           
           <div className="flex items-center gap-3">
-            <span className="w-6 text-center">📞</span>
+            <span className="w-6 text-center" aria-hidden="true">📞</span>
             <a 
-              href={`tel:${import.meta.env.VITE_PHONE}`} 
+              href={`tel:${process.env.NEXT_PUBLIC_PHONE}`} 
               className="hover:text-blue-600 transition-colors underline decoration-slate-200 underline-offset-4"
             >
-              {import.meta.env.VITE_PHONE}
+              {process.env.NEXT_PUBLIC_PHONE}
             </a>
           </div>
 
@@ -62,17 +59,18 @@ const ContactInfo = () => {
         </div>
       </div>
 
-      {/* Right side: Photo */}
       <div className="w-full md:w-64 flex justify-center md:justify-end">
-        <div className="w-48 h-48 md:w-64 md:h-64 overflow-hidden rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-          <img 
-            src={myPhoto} 
-            alt="Profile" 
-            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+        <div className="w-48 h-48 md:w-64 md:h-64 overflow-hidden rounded-2xl shadow-2xl relative aspect-square bg-slate-100">
+          <Image 
+            src="/cv1024x1024.png"
+            alt={process.env.NEXT_PUBLIC_NAME || 'Profile Photo'}
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 768px) 192px, 256px"
           />
         </div>
       </div>
-
     </section>
   );
 };

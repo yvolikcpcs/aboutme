@@ -31,3 +31,4 @@ dist-ssr
 # Do not ignore the template
 !.env.example
 .vercel
+.next

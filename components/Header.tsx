@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Menu, X, ChevronDown, ExternalLink } from 'lucide-react';
 
