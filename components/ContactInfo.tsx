@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import CopyableContact from './ui/CopyableContact';
 
 const ContactInfo = () => {
   // Logic remains on the server
@@ -6,6 +8,9 @@ const ContactInfo = () => {
     { label: 'LinkedIn', href: process.env.NEXT_PUBLIC_LINKEDIN },
     { label: 'GitHub', href: process.env.NEXT_PUBLIC_GITHUB },
   ].filter(link => link.href);
+
+  const email = process.env.NEXT_PUBLIC_EMAIL || '';
+  const phone = process.env.NEXT_PUBLIC_PHONE || '';
 
   return (
     <section className="py-12 flex flex-col-reverse md:flex-row justify-between items-start gap-8">
@@ -19,29 +24,12 @@ const ContactInfo = () => {
         
         <div className="flex flex-col gap-4 text-slate-500 font-medium">
           <div className="flex items-center gap-3">
-            <span className="w-6 text-center" aria-hidden="true">📍</span>
+            <MapPin size={18} strokeWidth={2} className="text-blue-600 shrink-0" />
             <span>{process.env.NEXT_PUBLIC_LOCATION}</span>
           </div>
           
-          {/* <div className="flex items-center gap-3">
-            <span className="w-6 text-center" aria-hidden="true">✉️</span>
-            <a 
-              href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} 
-              className="hover:text-blue-600 transition-colors underline decoration-slate-200 underline-offset-4"
-            >
-              {process.env.NEXT_PUBLIC_EMAIL}
-            </a>
-          </div> */}
-          
-          {/* <div className="flex items-center gap-3">
-            <span className="w-6 text-center" aria-hidden="true">📞</span>
-            <a 
-              href={`tel:${process.env.NEXT_PUBLIC_PHONE}`} 
-              className="hover:text-blue-600 transition-colors underline decoration-slate-200 underline-offset-4"
-            >
-              {process.env.NEXT_PUBLIC_PHONE}
-            </a>
-          </div> */}
+          <CopyableContact iconKey="email" value={email} />
+          <CopyableContact iconKey="phone" value={phone} />
 
           <div className="flex flex-wrap gap-6 mt-4">
             {socialLinks.map((link) => (
