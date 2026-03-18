@@ -23,7 +23,7 @@ const ContactInfo = () => {
             <span>{process.env.NEXT_PUBLIC_LOCATION}</span>
           </div>
           
-          <div className="flex items-center gap-3">
+          {/* <div className="flex items-center gap-3">
             <span className="w-6 text-center" aria-hidden="true">✉️</span>
             <a 
               href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} 
@@ -31,9 +31,9 @@ const ContactInfo = () => {
             >
               {process.env.NEXT_PUBLIC_EMAIL}
             </a>
-          </div>
+          </div> */}
           
-          <div className="flex items-center gap-3">
+          {/* <div className="flex items-center gap-3">
             <span className="w-6 text-center" aria-hidden="true">📞</span>
             <a 
               href={`tel:${process.env.NEXT_PUBLIC_PHONE}`} 
@@ -41,7 +41,7 @@ const ContactInfo = () => {
             >
               {process.env.NEXT_PUBLIC_PHONE}
             </a>
-          </div>
+          </div> */}
 
           <div className="flex flex-wrap gap-6 mt-4">
             {socialLinks.map((link) => (

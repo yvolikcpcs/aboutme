@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X, ChevronDown, ExternalLink } from 'lucide-react';
 
@@ -21,15 +22,15 @@ const Header = () => {
   return (
     <header className="py-3 border-b border-slate-100 sticky top-0 bg-white/80 backdrop-blur-md z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="/" className="font-black text-xl tracking-tighter uppercase">
+        <Link href="/" className="font-black text-xl tracking-tighter uppercase">
           Portfolio
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-xs font-bold uppercase tracking-widest text-slate-500">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-blue-600 transition-colors">
+            <Link key={link.href} href={link.href} className="hover:text-blue-600 transition-colors">
               {link.label}
-            </a>
+            </Link>
           ))}
 
           {/* Pet Projects Dropdown for Desktop */}
@@ -40,7 +41,7 @@ const Header = () => {
             
             <div className="absolute top-full -left-4 mt-2 w-48 bg-white border border-slate-100 shadow-2xl rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               {petProjects.map((project) => (
-                <a 
+                <Link
                   key={project.href}
                   href={project.href}
                   target="_blank"
@@ -49,7 +50,7 @@ const Header = () => {
                 >
                   {project.label}
                   <ExternalLink size={12} className="text-blue-600" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
