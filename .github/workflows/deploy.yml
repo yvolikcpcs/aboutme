@@ -45,6 +45,11 @@ jobs:
           # These are needed during build time for Next.js SSG
           NEXT_PUBLIC_NAME: ${{ vars.NEXT_PUBLIC_NAME }}
           NEXT_PUBLIC_ROLE: ${{ vars.NEXT_PUBLIC_ROLE }}
+          NEXT_PUBLIC_LOCATION: ${{ vars.NEXT_PUBLIC_LOCATION }}
+          NEXT_PUBLIC_EMAIL: ${{ vars.NEXT_PUBLIC_EMAIL }}
+          NEXT_PUBLIC_PHONE: ${{ vars.NEXT_PUBLIC_PHONE }}
+          NEXT_PUBLIC_LINKEDIN: ${{ vars.NEXT_PUBLIC_LINKEDIN }}
+          NEXT_PUBLIC_GITHUB: ${{ vars.NEXT_PUBLIC_GITHUB }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
 
