@@ -6,11 +6,12 @@ const supabase = createClient(
   process.env.SUPABASE_ANON_KEY!
 );
 export const getPortfolioData = async (): Promise<PortfolioData> => {
-  const [exp, edu, skills, langs] = await Promise.all([
+  const [exp, edu, skills, langs, contentBlocks] = await Promise.all([
     supabase.from('experiences').select('*, projects(*)').order('sort_order'),
     supabase.from('education').select('*'),
     supabase.from('technical_skills').select('*'),
     supabase.from('languages').select('*'),
+    supabase.from('content_blocks').select('*'),
   ]);
 
   return {
@@ -18,5 +19,6 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
     education: (edu.data as Education[]) || [],
     technicalSkills: (skills.data as TechnicalSkill[]) || [],
     languages: (langs.data as Language[]) || [],
+    contentBlocks: (contentBlocks.data as { key: string; value: string }[]) || [],
   };
 };

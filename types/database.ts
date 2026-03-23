@@ -41,6 +41,7 @@ export interface PortfolioData {
   education: Education[];
   technicalSkills: TechnicalSkill[];
   languages: Language[];
+  contentBlocks: { key: string; value: string }[];
 }
 
 export interface Database {
@@ -61,6 +62,12 @@ export interface Database {
       languages: {
         Row: Language;
       };
+      content_blocks: {
+        Row: {
+          key: string;
+          value: string;
+        };
+      }
     };
   };
 }

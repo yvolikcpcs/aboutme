@@ -65,35 +65,30 @@ CREATE POLICY "Allow public read access" ON languages FOR SELECT USING (true);
 
 -- Insert Experience records
 INSERT INTO experiences (id, company, role, period, description, sort_order) VALUES
-(1, 'Hearst Magazines (via Custom PC Software)', 'Senior Frontend Engineer', '01.2020 — Present', 'Global Media Platform (Cosmopolitan, Elle, Esquire, Quest).', 10),
-(2, 'Yomobile (via Custom PC Software)', 'Frontend Developer', '2019 — 2020', 'Global eSIM Connectivity Platform.', 20),
+(1, 'Hearst Magazines (USA)', 'Senior Frontend Engineer', '01.2020 — Present', 'Global Media Platform.', 10),
+(2, 'Yomobile', 'Frontend Developer', '2024 — 2025', 'Global eSIM Connectivity Platform.', 20),
 (3, 'Stanwood (Berlin, Germany)', 'Frontend Developer', '2018 — 2019', 'Digital Product Studio working for Funke Mediengruppe.', 30),
-(4, 'Custom E-commerce (via Custom PC Software)', 'Full-Stack & CMS Developer (Early Career)', '01.2011 — 2017', 'Building a strong foundation in web architecture and SSR logic.', 40);
+(4, 'Custom E-commerce', 'Full-Stack & CMS Developer (Early Career)', '01.2011 — 2017', 'Building a strong foundation in web architecture and SSR logic.', 40);
 
 -- Insert Project records linked to specific experiences
 INSERT INTO projects (experience_id, name, stack, links, points) VALUES
 (1, 'Enterprise Brand Architecture', 'React, Next.js, GraphQL, Styled Components, TypeScript, Piano, Optimizely, GA4, Marfeel', 
  ARRAY['https://www.cosmopolitan.com', 'https://www.elle.com', 'https://www.quest.nl', 'https://www.esquire.com'], 
  ARRAY[
-   'Architected and evolved scalable frontend solutions for premier global brands, supporting 10M+ monthly active users.',
-   'Acted as a technical mentor for junior and middle frontend engineers, conducting code reviews and establishing engineering best practices.',
-   'Led complex integrations of GA4 and Marfeel for deep behavioral analytics, alongside Piano (Paywalls) and Optimizely for full-stack A/B testing.',
-   'Optimized data fetching using GraphQL to ensure efficient content delivery across a vast global infrastructure.',
-   'Engineered robust User Consent (CMP) frameworks to ensure 100% GDPR and CCPA compliance across the global portfolio.'
+   '**Scale & Leadership:** Architected React/Next.js solutions for 10M+ users (Cosmo, Elle). Mentored junior/middle engineers, established best practices, and led code reviews.',
+   '**Performance & A11y:** Optimized Core Web Vitals and ensured WCAG 2.1 compliance across a global infrastructure using GraphQL and Styled Components.',
+   '**Analytics & Growth:** Built GDPR/CCPA frameworks and technical A/B test setups (Optimizely, Piano), driving measurable engagement and conversion growth.'
  ]),
 (2, 'E-commerce & Connectivity', 'Next.js (Server Actions), React, TypeScript, Tailwind CSS, SSO Auth', 
  ARRAY['https://www.yomobile.com/'], 
  ARRAY[
-   'Developed a high-performance, mobile-first e-commerce platform using Next.js Server Actions and Tailwind CSS.',
-   'Integrated secure SSO Authentication flows and implemented User Consent modules to enhance data protection and user privacy.',
-   'Optimized checkout UX and integrated GA tracking, driving significant growth in conversion rates and SEO performance.'
+   'Developed a high-performance e-commerce platform using Next.js and Tailwind CSS.',
+   'Integrated secure SSO flows, User Consent modules, and GA tracking to drive conversion growth and ensure data privacy.'
  ]),
 (3, 'Funke Mediengruppe - Digital Products', 'React, JavaScript, Agile/Scrum', 
  '{}', 
  ARRAY[
-   'Developed responsive web applications for German media leader Funke Mediengruppe, adhering to rigorous DACH code quality and accessibility standards.',
-   'Collaborated within an international English-speaking Scrum team to ensure rapid delivery of high-traffic news platforms.',
-   'Ensured high maintainability through technical code reviews and alignment with rigorous German engineering requirements.'
+   'Delivered responsive applications for major German media, adhering to rigorous DACH code quality and WCAG accessibility standards in an Agile environment.'
  ]),
 (4, 'International Retail Projects', 'PHP, WordPress, HTML5, CSS3', 
  '{}', 

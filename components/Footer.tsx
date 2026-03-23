@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import Modal from '@/components/ui/Modal';
 
-const Footer = () => {
+const Footer = ({ privacyElement }: { privacyElement: ReactNode | null }) => {
   const [modalType, setModalType] = useState<'impressum' | 'privacy' | null>(null);
 
   return (
@@ -30,15 +30,11 @@ const Footer = () => {
             <p className="text-xs text-slate-400">Responsible for content according to § 5 TMG / § 55 RStV.</p>
           </div>
         ) : (
-          <div className="space-y-4">
-            <p>This website uses <strong>Vercel Analytics</strong> to monitor traffic and improve user experience.</p>
-            <ul className="list-disc pl-5 space-y-2">
-              <li><strong>No Cookies:</strong> No cookies are used or stored on your device.</li>
-              <li><strong>Anonymity:</strong> No personal data or IP addresses are collected. All data is fully anonymized.</li>
-              <li><strong>Compliance:</strong> This setup is fully compliant with GDPR (DSGVO).</li>
-            </ul>
-            <p>The processing is based on Art. 6 para. 1 lit. f GDPR.</p>
-          </div>
+          privacyElement && (
+            <article className="prose prose-slate prose-sm max-w-none">
+              {privacyElement}
+            </article>
+          )
         )}
       </Modal>
     </footer>

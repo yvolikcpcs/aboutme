@@ -1,4 +1,5 @@
 import { Briefcase } from 'lucide-react';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import SectionHeading from '@/components/ui/SectionHeading';
 import type { Experience } from '@/types/database';
 
@@ -19,6 +20,11 @@ const ExperienceSection = ({ data }: { data: Experience[] }) => {
                 {exp.period}
               </span>
             </div>
+            {exp.description && (
+              <p className="text-sm text-slate-600 mt-2">
+                {exp.description}
+              </p>
+            )}
             <p className="text-blue-600 font-bold text-lg mt-1 uppercase tracking-wide">
               {exp.role}
             </p>
@@ -58,7 +64,7 @@ const ExperienceSection = ({ data }: { data: Experience[] }) => {
                   {project.points.map((point, k) => (
                     <li key={k} className="flex gap-3">
                       <span className="text-blue-600 font-bold">/</span>
-                      {point}
+                      <MDXRemote source={point} />                      
                     </li>
                   ))}
                 </ul>

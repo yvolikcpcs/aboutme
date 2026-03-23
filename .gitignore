@@ -32,3 +32,6 @@ dist-ssr
 !.env.example
 .vercel
 .next
+
+.repomixignore
+repomix-output.xml
