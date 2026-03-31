@@ -10,6 +10,8 @@ import { getPortfolioData } from "@/lib/supabase";
 import { Metadata } from "next";
 import { compileMDX } from "next-mdx-remote/rsc";
 
+export const revalidate = 3600;
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
   title: `${process.env.NEXT_PUBLIC_NAME} | ${process.env.NEXT_PUBLIC_ROLE}`,
