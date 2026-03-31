@@ -14,14 +14,23 @@ export const revalidate = 3600;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-  title: `${process.env.NEXT_PUBLIC_NAME} | ${process.env.NEXT_PUBLIC_ROLE}`,
-  description: `${process.env.NEXT_PUBLIC_ROLE} based in ${process.env.NEXT_PUBLIC_LOCATION}. Specialist in React and Enterprise architecture.`,
-  openGraph: {
-    title: `${process.env.NEXT_PUBLIC_NAME} - Portfolio`,
-    description: `Professional experience and projects.`,
-    images: [{ url: '/cv1024x1024.png' }],
-  },
-};
+    title: `${process.env.NEXT_PUBLIC_NAME} | ${process.env.NEXT_PUBLIC_ROLE}`,
+    description: `${process.env.NEXT_PUBLIC_ROLE} based in ${process.env.NEXT_PUBLIC_LOCATION}. Specialist in React and Enterprise architecture.`,
+    openGraph: {
+      title: `${process.env.NEXT_PUBLIC_NAME} - Portfolio`,
+      description: `Professional experience and projects.`,
+      images: [{ url: '/cv1024x1024.png' }],
+    },
+    icons: {
+      icon: [
+        { url: '/favicon.ico' },
+        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/apple-touch-icon.png', sizes: '180x180' },
+      ],
+    },
+  };
 }
 
 export default async function Home() {
